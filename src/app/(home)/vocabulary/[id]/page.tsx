@@ -7,37 +7,48 @@ interface IRouteProps {
 export default async function Vocabulary(props: IDynamicRoute<IRouteProps>) {
     return (
         <div className={'h-screen w-screen flex flex-col items-center'}>
-            <div className={'mt-10 mb-10 text-4xl font-bold text-'}>
+            <div className={'mt-10 mb-10 text-4xl font-bold'}>
                 Vocabulary Name
             </div>
-            <div className={'min-w-[20%] min-h-[10%] max-w-prose'}>
-                <input className={'w-full h-full border-2 border-[#8098F9]/50 rounded-[10px] bg-[#D9D9D9] flex justify-center'} placeholder={'Note'} type={'text'}/>
-            </div>
-                <div className={'w-[80%] h-fit text-center flex flex-col justify-center'}>
-                    <div className={'flex'}>
-                        <div>
-                            #
-                        </div>
-                        <div className={'grow'}>
+
+            <div className="w-[50%] relative overflowclassNameto">
+                <table className="w-full text-sm teclassNameft text-gray-500 dark:text-gray-400">
+                    <thead className="text-md text-grayclassNameuppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" className="px-6 py-3">
+                            Id
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             English
-                        </div>
-                        <div className={'grow'}>
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             Japanese
-                        </div>
-                    </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="bg-white border-bclassName:bg-gray-800 dark:border-gray-700 text-center">
+                            <td className="px-6 py-4">
+                                1
+                            </td>
+                            <td>
+                                <input
+                                    className={'w-[80%] text-black border-2 border-[#8098F9]/50 bg-[#8098F9]/10 text-[#2D31A6]/20 focus:outline-none'}
+                                    type={'text'}
+                                    placeholder={'English'}
+                                />
+                            </td>
+                            <td>
+                                <input
+                                    className={'w-[80%] text-black border-2 border-[#8098F9]/50 bg-[#8098F9]/10 text-[#2D31A6]/20 focus:outline-none'}
+                                    type={'text'}
+                                    placeholder={'Japanese'}
+                                />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                    <div className={'flex'}>
-                        <div>
-                            1
-                        </div>
-                        <div className={'grow'}>
-                            <input className={'w-full'} type={'text'} value={'Asd'}/>
-                        </div>
-                        <div className={'grow'}>
-                            <input className={'w-full'} type={'text'} value={'Asd'}/>
-                        </div>
-                    </div>
-
-                </div>
         </div>)
 }

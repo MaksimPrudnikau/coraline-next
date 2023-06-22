@@ -57,7 +57,7 @@ export default function Register(props: IProps) {
         </button>
         <div className={"w-full flex items-center justify-center gap-1 text-xs"}>
           <p className={"text-[#71717A]"}>Already have an account?</p>
-          <Link className={"text-[#8098F9]"} href={Routes.SignUp}>
+          <Link className={"text-[#8098F9]"} href={Routes.SignIn}>
             Sign in
           </Link>
         </div>
